@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b1b" />
+  <title>Panda Universe — A Journey Through Our Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="space"></canvas>
+  <div class="vignette"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Panda Universe home">
+      <span class="brand-mark">✦</span>
+      <span>PANDA <b>UNIVERSE</b></span>
+    </a>
+    <div class="top-status"><span class="status-dot"></span><span id="journeyStatus">MISSION CONTROL · EARTH</span></div>
+    <button class="sound-toggle" id="soundToggle" title="Toggle sound effects" aria-label="Toggle sound effects">♫ <span>Sound off</span></button>
+  </header>
+
+  <main>
+    <section class="hero-screen active" id="earthScreen">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A TRANSMISSION FROM YOUR UNIVERSE</p>
+        <h1>For one very<br><em>special human.</em></h1>
+        <p class="hero-description">A one-of-a-kind cosmic postcard, made of little surprises, distant worlds, and the memories that make life brighter. Your launch window is open.</p>
+        <div class="mission-card">
+          <div class="mission-icon">🚀</div>
+          <div><small>YOUR PERSONAL STARSHIP</small><strong>Destination: <span>Pandaa's Universe</span></strong><p>Five worlds. One story. Countless little reasons to smile.</p></div>
+        </div>
+        <button class="primary-btn launch-cta" id="launchBtn"><span>Open your universe</span><b>↗</b></button>
+        <p class="microcopy">A little wonder is waiting beyond the launch sequence.</p>
+      </div>
+      <div class="earth-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="earth-glow"></div><div class="earth"></div>
+        <div class="earth-label"><span></span> HOME · EARTH</div>
+        <div class="launch-platform"><div class="platform-light"></div></div>
+        <div class="rocket" id="heroRocket"><div class="rocket-nose"></div><div class="rocket-body"><div class="window"></div><div class="rocket-stripe"></div></div><div class="fin fin-left"></div><div class="fin fin-right"></div><div class="flame"></div></div>
+        <div class="floating-star star-a">✦</div><div class="floating-star star-b">✧</div><div class="floating-star star-c">✦</div>
+        <div class="coordinate">12° 34' 56" N<br>MISSION 001</div>
+      </div>
+    </section>
+
+    <section class="travel-screen" id="travelScreen" aria-live="polite">
+      <div class="travel-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> DEEP SPACE TRANSIT</p>
+        <h2 id="travelTitle">Leaving everything familiar...</h2>
+        <p id="travelText">The stars are getting closer. Our story is just getting started.</p>
+        <div class="travel-progress"><div id="travelProgress"></div></div>
+        <small id="travelHint">PREPARING FLIGHT PATH</small>
+      </div>
+      <div class="travel-rocket" id="travelRocket">🚀</div>
+    </section>
+
+    <section class="planet-screen" id="planetScreen">
+      <div class="planet-topline">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> DESTINATION REACHED</p><p class="destination-count" id="destinationCount">01 / 05 DESTINATIONS</p></div>
+        <div class="journey-progress"><div id="journeyProgress"></div></div>
+      </div>
+      <div class="planet-layout">
+        <div class="planet-visual-wrap">
+          <div class="planet-halo"></div><div class="planet-visual" id="planetVisual"></div>
+          <div class="planet-orbit-dot"></div>
+          <div class="planet-caption" id="planetCaption">LUNAR OUTPOST · 384,400 KM</div>
+        </div>
+        <div class="planet-content">
+          <p class="planet-kicker" id="planetKicker">DESTINATION 01 · THE BEGINNING</p>
+          <h2 id="planetName">The Moon</h2>
+          <p class="planet-subtitle" id="planetSubtitle">Every great journey starts with one small step.</p>
+          <div class="message-panel">
+            <span class="quote-mark">“</span>
+            <p id="planetMessage">Hey Madhura! Welcome to your little universe. I wanted to make something that feels as special as all the memories we've collected. This is only the beginning.</p>
+          </div>
+          <div class="planet-actions">
+            <button class="primary-btn" id="revealBtn"><span>Reveal your surprise</span><b>✧</b></button>
+            <button class="text-btn next-destination hidden" id="nextPlanetBtn">Launch to next planet <span>🚀</span></button>
+          </div>
+          <p class="unlock-note" id="unlockNote">Explore this planet to unlock the next destination.</p>
+        </div>
+      </div>
+      <div class="planet-nav" id="planetNav"></div>
+
+      <section class="memory-galaxy hidden" id="memoryGalaxy" aria-label="Our memory galaxy">
+        <div class="memory-galaxy-heading"><p class="eyebrow"><span class="eyebrow-line"></span> THE FINAL ORBIT · JUST FOR US</p><h2>Our little <em>universe of memories.</em></h2><p>Before we return home, let's stay here for a while and revisit the moments that matter.</p></div>
+        <div class="memory-music"><div class="music-disc" aria-hidden="true">♫</div><div class="music-copy"><strong>Our little soundtrack</strong><span id="musicStatus">A song to keep this moment close</span></div><button class="music-button" id="musicToggle" type="button">▶ Play our song</button><audio id="memoryAudio" preload="none" loop src="assets/our-song.mp3"></audio></div>
+        <div class="photo-memory-grid">
+          <article class="photo-memory"><img src="assets/photos/memory-1.png" alt="A favourite memory together" onerror="this.style.display='none'"><div><small>MEMORY 01</small><h3>The little moments</h3><p></p></div></article>
+          <article class="photo-memory"><img src="assets/photos/memory-2.png" alt="A happy memory together" onerror="this.style.display='none'"><div><small>MEMORY 02</small><h3>The laughs</h3><p></p></div></article>
+          <article class="photo-memory"><img src="assets/photos/memory-3.png" alt="A special day together" onerror="this.style.display='none'"><div><small>MEMORY 03</small><h3>A day to remember</h3><p></p></div></article>
+        </div><p class="memory-signoff">Some people make the whole universe feel like home. <span>✦</span></p>
+      </section>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="giftModal">
+    <div class="modal-card">
+      <button class="modal-close" data-close="giftModal" aria-label="Close">×</button>
+      <div class="gift-sparkle">✧</div>
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h2 id="giftTitle">A tiny gift from the universe</h2>
+      <p id="giftText">You make ordinary moments feel extraordinary. Never forget how much light you bring into the lives around you.</p>
+      <div class="gift-seal">MADE WITH ✦ FOR PANDAA</div>
+      <button class="primary-btn modal-done" data-close="giftModal"><span>Keep this close</span><b>♡</b></button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="finalModal">
+    <div class="modal-card final-card">
+      <div class="gift-sparkle">✦</div>
+      <p class="eyebrow">MISSION COMPLETE</p>
+      <h2>Our universe is better with you in it.</h2>
+      <p>Happy Birthday, Madhuraa. No matter how far life takes us, I hope you always find a little piece of joy, wonder, and friendship wherever you go.</p>
+      <div class="gift-seal">ENDLESS MEMORIES · INFINITE FRIENDSHIP</div>
+      <button class="primary-btn modal-done" data-close="finalModal"><span>Relive the journey</span><b>↻</b></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">New destination unlocked ✨</div>
+  <footer><span>BUILT FROM MEMORIES</span><span>✦</span><span>THE PANDA UNIVERSE</span></footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
